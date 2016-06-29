@@ -1,5 +1,8 @@
-This is your new Play application
-=================================
+This is your new Play application with JDBC Connection
+=======================================================
+
+Create a database in mysql and change the configuration accordingly.
+====================================================================
 
 This file will be packaged with your application when using `activator dist`.
 
