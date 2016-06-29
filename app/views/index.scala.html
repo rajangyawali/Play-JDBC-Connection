@@ -1,0 +1,32 @@
+
+@(loginForm: Form[Employee])(implicit messages: Messages)
+ 
+@import views.html.helper._
+ 
+@main("Welcome to Employee Management System with DataBase !!") {
+    <br>
+    <h5>Add the information as required !!</h5>
+    <br>
+    @form(action=routes.HomeController.doLogin()) {
+        @inputText(loginForm("Employee Name"))
+        @inputText(loginForm("Age"))
+        @inputText(loginForm("Sex"))
+       @* @inputRadioGroup(
+          loginForm("sex"),
+          options = Seq("M"->"Male","F"->"Female"),
+          '_label -> "Sex",
+          '_error -> loginForm("sex").error.map(_.withMessage("select sex")))*@
+        @inputText(loginForm("Address"))
+        @inputText(loginForm("Email"))
+        @inputText(loginForm("Education"))
+        @inputText(loginForm("Marital Status"))
+      @*  @inputRadioGroup(
+          loginForm("maritalStatus"),
+          options = Seq("M"->"Married","U"->"Unmarried", "D" -> "Divorced"),
+          '_label -> "Marital Status",
+          '_error -> loginForm("maritalStatus").error.map(_.withMessage("select maritalStatus")))
+     *@   @inputText(loginForm("Salary (in K)"))
+        
+        <input type="submit" value="Submit">
+    }
+}

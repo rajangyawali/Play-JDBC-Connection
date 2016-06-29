@@ -1,0 +1,33 @@
+@(list:Seq[Employee])
+
+@main("Welcome to EMS") {
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href="@routes.Assets.versioned("stylesheets/search.css")" rel="stylesheet">
+  <table class = "table">
+    <tr style="font-size: 120%; text-align:center">
+      <td>Name</td>
+      <td>Age</td>
+      <td>Sex</td>
+      <td>Address</td>
+      <td>Email</td>
+      <td>Education</td>
+      <td>Marital Status</td>
+      <td>Salary (in K)</td>
+    </tr>
+  @for(t <- list) {
+    <tr>
+      <td>@t.name </td>
+      <td>@t.age </td>
+      <td>@t.sex </td>
+      <td>@t.address </td>
+      <td>@t.email </td>
+      <td>@t.education </td>
+      <td>@t.maritalStatus </td>
+      <td>@t.salary </td>
+
+    </tr>
+  }
+  </table>
+}
